@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Phonebook </title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1 class="text_center">Phone B~ook</h1>
+    <div class="container">    
+        <input class="input_text"  id="search" placeholder="search">
+        <button class="btn" onclick="search()">Search</button>  
+        <div id="result" class="text"></div>
+    </div>
+
+    <script>        
+        const  contacts={
+            "dipali" : 93254492647,
+            "rutuja" : 9370892488,
+            "maya" : 8577489348,
+            "raj" : 9479774974,
+            "renuka" : 7580390294,
+            "megha" : 6578390290,
+            "pooja" : 6579302666,
+            "manav" : 7799999466,
+        }
+
+        function search()
+        {
+            const searchInput=document.getElementById("search");
+            const query=searchInput.value.toLowerCase();
+            const  mobile =contacts[query]
+            if(mobile){
+                result.innerText=`Mobile number of ${query} is ${mobile}`;
+            }
+            else{                
+                result.innerText = `Mobile number not found ` 
+            }
+        }
+    </script>
+</body>
+</html>
